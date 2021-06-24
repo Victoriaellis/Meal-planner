@@ -1,0 +1,6 @@
+<div class=" form-text form-style col-6 offset-3 border p-4 bg-white">
+<%= simple_form_for [@recipe] do |f| %>
+    <%= f.input :name, required: false, placeholder: 'please enter a recipe name' %>
+    <%= f.button :submit, class: "btn btn-success text-center" %>
+  <% end %>
+</div>

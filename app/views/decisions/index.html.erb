@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>My meal plan</h1>
+  <% @decisions.each do |decision| %>
+  <div class="container p-3">
+    <p><%= decision.weekday.day %>
+    <p><%= decision.recipe.name if decision.weekday.day == "Monday"  %></p>
+    <p><i><%= decision.comment if decision.weekday.day == "Monday" %></i></p>
+
+    <p><%= decision.recipe.name if decision.weekday.day == "Tuesday"  %></p>
+    <p><i><%= decision.comment if decision.weekday.day == "Tuesday" %></i></p>
+
+    <p><%= decision.recipe.name if decision.weekday.day == "Wednesday"  %></p>
+    <p><i><%= decision.comment if decision.weekday.day == "Wednesday" %></i></p>
+
+    <p><%= decision.recipe.name if decision.weekday.day == "Thursday"  %></p>
+    <p><i><%= decision.comment if decision.weekday.day == "Thursday" %></i></p>
+
+    <p><%= decision.recipe.name if decision.weekday.day == "Friday"  %></p>
+    <p><i><%= decision.comment if decision.weekday.day == "Friday" %></i></p>
+  </div>
+  <% end %>
+</div>

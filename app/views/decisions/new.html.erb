@@ -1,0 +1,5 @@
+<%= simple_form_for [@recipe, @decision] do |f| %>
+  <%= f.input :comment, required: false, placeholder: 'any comments?' %>
+  <%= f.association :weekday %>
+  <%= f.submit "Create plan", class: "btn btn-success"%>
+<% end %>

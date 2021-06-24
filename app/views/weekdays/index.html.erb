@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>My meal plan</h1>
+  <% @weekdays.each do |weekday| %>
+  <div class="container p-3">
+    <p><%= weekday.day %> : <%= decision.recipe.name %></p>
+    <p><i><%= weekday.decision.comment %></i></p>
+  </div>
+  <% end %>
+</div>

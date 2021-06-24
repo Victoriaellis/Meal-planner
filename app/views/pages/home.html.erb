@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image:url(<%= asset_path 'food.jpeg' %>)">
+  <div class="container">
+    <h1>My Meal Planner</h1>
+    <p>Meal planning made easy!</p>
+    <a href="<%= recipes_path %>", class="banner-btn text-decoration-none">Check out recipes</a>
+  </div>
+</div>
