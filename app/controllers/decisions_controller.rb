@@ -5,16 +5,16 @@ class DecisionsController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.find(params[:recipe_id])
+    @weekday = Weekday.find(params[:weekday_id])
     @decision = Decision.new
   end
 
   def create
     @decision = Decision.new(decision_params)
-    @recipe = Recipe.find(params[:recipe_id])
-    @decision.recipe = @recipe
+    @weekday = Weekday.find(params[:weekday_id])
+    @decision.weekday = @weekday
     if @decision.save
-      redirect_to recipe_decisions_path
+      redirect_to weekday_decisions_path
     else
       render :new
     end
@@ -23,6 +23,6 @@ class DecisionsController < ApplicationController
   private
 
   def decision_params
-    params.require(:decision).permit(:comment, :weekday_id)
+    params.require(:decision).permit(:comment, :recipe_id)
   end
 end

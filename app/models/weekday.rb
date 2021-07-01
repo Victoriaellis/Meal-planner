@@ -1,4 +1,5 @@
 class Weekday < ApplicationRecord
+  has_many :decisions
   has_many :recipes, through: :decisions
   validates :day, presence: true, uniqueness: true
 

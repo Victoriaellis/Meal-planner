@@ -2,8 +2,9 @@
   <h1>My meal plan</h1>
   <% @weekdays.each do |weekday| %>
   <div class="container p-3">
-    <p><%= weekday.day %> : <%= decision.recipe.name %></p>
-    <p><i><%= weekday.decision.comment %></i></p>
+    <p><%= weekday.day %></p>
+    <p><%= weekday.decisions.recipes %></p>
+    <%= link_to "Add meal", new_weekday_decision_path(weekday) %></button>
   </div>
   <% end %>
 </div>

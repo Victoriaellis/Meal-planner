@@ -4,7 +4,6 @@
   <div>
     <%= recipe.name %>
     <%= link_to 'Delete recipe', recipe_path(recipe), method: :delete, class: "btn btn-remove text-secondary"%>
-    <%= link_to "Add to meal plan", new_recipe_decision_path(recipe) %></button>
   <% end %>
   </div>
 
